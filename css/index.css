@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+header {
+    padding: 20px;
+    background-color: #0ba79d;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: radial-gradient(circle, #90e0e6, #0ba79d);
+    padding-bottom: 60px;
+}
+
+.escolha {
+    background-color: white;
+    padding: 100px;
+    border-radius: 20px;
+    margin: 25vh 70vh;
+}
+
+h1 {
+    color: black;
+    font-size: 35px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-bottom: 30px;
+}
+
+
+.button {
+    background-color: rgb(4, 122, 114);
+    font-size: 30px;
+    text-decoration: none;
+    border-radius: 10px;
+    color: black;
+    padding: 8px;
+}
+
+
+.logo {
+    float: left;
+    width: 250px;
+    height: 200px;
+    background-image: url('./images/logo1.png');
+    background-size: cover;
+    background-position: center;
+    transition: background-image 0.3s ease-in-out;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: #142833;
+    text-align: center;
+    padding: 20px;
+    background-color: #0ba79d;
+}
+
+
