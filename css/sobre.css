@@ -1,0 +1,79 @@
+  :root {
+            /* Cores */
+            --primary-dark: #04668C;
+            --primary-light: #89D9D9;
+            --secondary-dark: #308C50;
+            --secondary-light: #57A608;
+            --neutral-dark: #0D0D0D;
+            --neutral-light: #FFFFFF;
+            --gray-100: #f8f9fa;
+            --gray-200: #e9ecef;
+            --gray-500: #adb5bd;
+            
+            /* Tipografia */
+            --font-primary: 'Montserrat', sans-serif;
+            --font-secondary: 'Roboto', sans-serif;
+            
+            --text-xs: 0.75rem;
+            --text-sm: 0.875rem;
+            --text-base: 1rem;
+            --text-lg: 1.125rem;
+            --text-xl: 1.25rem;
+            --text-2xl: 1.5rem;
+            --text-3xl: 1.875rem;
+            --text-4xl: 2.25rem;
+            --text-5xl: 3rem;
+        }
+        
+        body {
+            font-family: var(--font-secondary);
+            color: var(--neutral-dark);
+            background-color: var(--gray-100);
+            line-height: 1.6;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-primary);
+            font-weight: 600;
+            color: var(--primary-dark);
+        }
+
+.section-title {
+  font-size: var(--text-3xl);
+  margin-bottom: 2rem;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background-color: var(--secondary-light);
+  border-radius: 2px;
+}
+
+
+#sobre-servicos {
+  background: var(--neutral-light);
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  padding: 3rem;
+  margin-top: 2rem;
+}
+
+#sobre-servicos p {
+  font-size: var(--text-base);
+  text-align: justify;
+  margin-bottom: 1rem;
+}
+
+.mapa-container {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+

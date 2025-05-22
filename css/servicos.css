@@ -1,0 +1,231 @@
+/* VARIÁVEIS */
+:root {
+    /* Cores baseadas na tabela fornecida */
+    --primary-dark: #04668C;       /* Azul escuro */
+    --primary-light: #89D9D9;      /* Azul claro */
+    --secondary-dark: #308C50;     /* Verde escuro */
+    --secondary-light: #57A608;    /* Verde claro */
+    --neutral-dark: #0D0D0D;      /* Preto */
+    --neutral-light: #FFFFFF;      /* Branco */
+    --gray-100: #f8f9fa;          /* Cinza claro */
+    --gray-200: #e9ecef;          /* Cinza médio */
+    --gray-500: #adb5bd;          /* Cinza */
+    
+    /* Tipografia */
+    --font-primary: 'Montserrat', sans-serif;
+    --font-secondary: 'Roboto', sans-serif;
+    
+    --text-xs: 0.75rem;
+    --text-sm: 0.875rem;
+    --text-base: 1rem;
+    --text-lg: 1.125rem;
+    --text-xl: 1.25rem;
+    --text-2xl: 1.5rem;
+    --text-3xl: 1.875rem;
+    --text-4xl: 2.25rem;
+    --text-5xl: 3rem;
+}
+
+/* ANIMAÇÕES GERAIS */
+.animate__animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+@keyframes borderGlow {
+    0% { box-shadow: 0 0 10px rgba(71, 184, 129, 0.3); }
+    50% { box-shadow: 0 0 20px rgba(71, 184, 129, 0.6); }
+    100% { box-shadow: 0 0 10px rgba(71, 184, 129, 0.3); }
+}
+
+/* ESTILOS GERAIS */
+body {
+    font-family: var(--font-secondary);
+    color: var(--neutral-dark);
+    background-color: var(--gray-100);
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-primary);
+    font-weight: 600;
+}
+
+
+/* SEÇÃO SOBRE SERVIÇOS */
+#sobre-servicos {
+    background-color: var(--neutral-light);
+    position: relative;
+    overflow: hidden;
+}
+
+#sobre-servicos::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../Imagens/bg-pattern.png') repeat;
+    opacity: 0.03;
+    z-index: 0;
+}
+
+#sobre-servicos .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1;
+    border-radius: 10px;
+}
+
+#sobre-servicos .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1) !important;
+}
+
+/* SEÇÃO TREINO PERSONALIZADO */
+#treino {
+    background: linear-gradient(135deg, var(--primary-light) 0%, var(--secondary-light) 100%);
+    color: var(--neutral-dark);
+}
+
+#treino img {
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    border-radius: 10px;
+}
+
+#treino img:hover {
+    transform: scale(1.05);
+}
+
+#treino .fa-check-circle {
+    transition: transform 0.3s ease;
+    color: var(--secondary-dark);
+}
+
+#treino .hover-effect:hover .fa-check-circle {
+    transform: scale(1.3);
+    color: var(--primary-dark);
+}
+
+/* SEÇÃO PLANOS */
+#planos {
+    background-color: var(--neutral-light);
+}
+
+.plano-card {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-origin: center bottom;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 15px !important;
+    
+}
+
+.plano-card:hover {
+    transform: translateY(-15px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15) !important;
+}
+
+.plano-card:hover::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: inherit;
+    animation: borderGlow 1.5s infinite;
+}
+
+#planos .card-header {
+    font-family: var(--font-primary);
+    letter-spacing: 1px;
+    border-radius: 0 !important;
+}
+
+#planos .pricing-card-title {
+    font-size: var(--text-3xl);
+    font-weight: 700;
+}
+
+/* Botões */
+#planos .card.border-success .btn-success {
+    background-color: var(#ca03f1);
+    border-color: var(#cc0e0e);
+}
+
+#planos .card.border-success .btn-success:hover {
+    background-color: #ea00ff;
+    border-color: #cc0e0e;
+}
+
+/* Badge "Mais Popular" */
+#planos .badge {
+    font-weight: 600;
+    padding: 5px 10px;
+    transition: all 0.3s ease;
+}
+
+.plano-card:hover .badge {
+    transform: scale(1.1);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* HOVER EFFECTS GLOBAIS */
+.hover-effect:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+}
+
+.hover-effect:hover i {
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+}
+
+
+
+.bg-plano-basico {
+  background-color: #82b153 !important; /* Verde esmeralda */
+ 
+}
+
+.bg-plano-medio {
+  background-color: #09a475!important; /* Verde oliva suave */
+  
+}
+
+.bg-plano-avancado {
+  background-color: #82b153 !important; /* Verde menta acinzentado */
+}
+
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+    #sobre-servicos .col-md-6:first-child,
+    #treino .col-lg-6:first-child,
+    #planos .col-md-4 {
+        margin-bottom: 2rem;
+    }
+
+    .animate__animated,
+    .hover-effect:hover {
+        animation: none !important;
+        transform: none;
+    }
+    
+    .plano-card:hover {
+        transform: none;
+        box-shadow: none !important;
+    }
+    
+    .plano-card:hover::after {
+        animation: none;
+    }
+}

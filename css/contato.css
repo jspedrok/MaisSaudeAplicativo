@@ -1,0 +1,183 @@
+:root {
+    /* Nova Paleta Profissional */
+    --primary-dark: #5a6570;      /* Azul navalha escuro */
+    --primary-light: #B0C4DE;     /* Azul pastel suave */
+    --secondary-dark: #4A707A;    /* Verde-azulado terroso */
+    --secondary-light: #c9cec2;   /* Verde sage claro */
+    --accent-color: #8B5D5D;      /* Terracota suave */
+    --neutral-dark: #4a555f;      /* Cinza-azulado escuro */
+    --neutral-light: #f8faf8;     /* Branco suave */
+    --gray-100: #ECF0F1;          /* Cinza claro neutro */
+    --gray-200: #dee6df;          /* Cinza médio frio */
+    --gray-500: #95A5A6;          /* Cinza-azulado */
+
+    /* Mantido o restante das variáveis originais */
+}
+
+.container-contato {
+    max-width: 1200px;
+    margin: 100px auto 50px;
+    padding: 2rem;
+    background: linear-gradient(135deg, var(--gray-100) 0%, var(--neutral-light) 100%);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.titulo-principal {
+    font-family: var(--font-primary);
+    font-weight: 700;
+    color: var(--primary-dark);
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 25px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.subtitulo {
+    text-align: center;
+    color: var(--neutral-dark);
+    margin-bottom: 3rem;
+    font-size:  20px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.8;
+}
+
+/* Formulário */
+.formulario-contato {
+    background: rgba(253, 253, 253, 0.85);
+    padding: 3rem 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+    border: 1px solid transparent;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.formulario-contato::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(135deg, var(--gray-100), var(--gray-200));
+    opacity: 0.2;
+    z-index: 0;
+    pointer-events: none;
+    transform: rotate(15deg);
+}
+
+.formulario-contato > * {
+    position: relative;
+    z-index: 1;
+}
+
+.form-group {
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.75rem;
+    color: var(--primary-dark);
+    font-weight: 600;
+    font-family: var(--font-primary);
+    font-size: var(--text-lg);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid var(--gray-200);
+    border-radius: 8px;
+    font-size: var(--text-base);
+    transition: all 0.3s ease;
+    font-family: var(--font-secondary);
+    background-color: var(--gray-100);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--secondary-dark);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(8, 166, 88, 0.1);
+    background-color: var(--neutral-light);
+}
+
+.form-group textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.btn-enviar {
+    background: #4a7a5c;
+    color: var(--neutral-light);
+    padding: 1.25rem 2.5rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: var(--text-lg);
+    transition: all 0.3s ease;
+    width: auto;
+    margin: 1rem auto 0;
+    display: block;
+    font-family: var(--font-primary);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-enviar:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(8, 166, 88, 0.3);
+}
+
+.btn-enviar::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(255,255,255,0.2), transparent);
+    transform: rotate(45deg);
+    transition: all 0.5s;
+}
+
+.btn-enviar:hover::after {
+    left: 150%;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container-contato {
+        margin: 80px 15px 30px;
+        padding: 1.5rem;
+    }
+
+    .formulario-contato {
+        padding: 1.5rem;
+    }
+
+    .titulo-principal {
+        font-size: var(--text-2xl);
+    }
+
+    .subtitulo {
+        font-size: var(--text-base);
+        padding: 0 1rem;
+    }
+
+    .btn-enviar {
+        width: 100%;
+        padding: 1rem;
+    }
+}
